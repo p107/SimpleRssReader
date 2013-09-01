@@ -1,0 +1,39 @@
+body {
+	background-color: #fff;
+}
+
+div.main {
+	width: 900px;
+	margin: auto;
+	padding: 10px;
+	background-color: #fff;
+	font-family: tahoma,verdana,arial,sans-serif;
+	font-size: 12px;
+}
+
+div.block, div.block h3.block_title, div.block div.block_content {
+	border-radius: 3px;
+}
+
+div.block {
+	border: 1px solid #789;
+	background-color: #abc;
+	padding: 1px;
+}
+
+div.block h3.block_title {
+	margin: 0;
+	border: 1px solid #123;
+	background-color: #789;
+	padding: 3px 5px;
+	color: #fff;
+	
+}
+
+div.block div.block_content {
+	margin: 2px 0 0 0;
+	border: 1px solid #123;
+	background-color: #fff;
+	padding: 5px;
+}
+

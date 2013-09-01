@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>xlab</title>
+	<atom:link href="http://xlab.pl/feed/" rel="self" type="application/rss+xml" />
+	<link>http://xlab.pl</link>
+	<description>XSolve laboratory - dzielimy się tym co wiemy...</description>
+	<lastBuildDate>Tue, 13 Aug 2013 06:00:47 +0000</lastBuildDate>
+	<language>pl-PL</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.6</generator>
+		<item>
+		<title>Facebook fanpage feed</title>
+		<link>http://xlab.pl/facebook-fanpage-feed/</link>
+		<comments>http://xlab.pl/facebook-fanpage-feed/#comments</comments>
+		<pubDate>Tue, 13 Aug 2013 06:00:47 +0000</pubDate>
+		<dc:creator>Piotr Pasich</dc:creator>
+				<category><![CDATA[Programowanie PHP]]></category>
+		<category><![CDATA[atom]]></category>
+		<category><![CDATA[facebook]]></category>
+		<category><![CDATA[fanpage]]></category>
+		<category><![CDATA[json]]></category>
+		<category><![CDATA[newsfeed]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[rss]]></category>
+		<category><![CDATA[symfony2]]></category>
+
+		<guid isPermaLink="false">http://xlab.pl/?p=2171</guid>
+		<description><![CDATA[Ostatnio kiedy pisałem na temat pobierania postów z fanpage&#8217;a an facebooku do naszej strony internetowej bądź API było to dość skomplikowane. Trzeba było założyć aplikację w facebook developers, łączyć się z nią oraz pilnować czy nasza sesja offline nie wygasła. Dodatkowo w międzyczasie facebook zmienił politykę przechowywania sesji offline i nie jest już ona tak [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Ostatnio kiedy pisałem na temat pobierania postów z fanpage&#8217;a an facebooku do naszej strony internetowej bądź API było to dość skomplikowane. Trzeba było założyć aplikację w facebook developers, łączyć się z nią oraz pilnować czy nasza sesja offline nie wygasła. Dodatkowo w międzyczasie facebook zmienił politykę przechowywania sesji offline i nie jest już ona tak długa. </p>
+<p>Zacząłem szukać innego rozwiązania tego problemu i znalazłem. Gdzie? Oczywiście nie na stronie dokumentacji facebooka. Facebook udostępnia news feed w wybranych formatach przez specjalnie do tego przygotowaną stronę: https://facebook.com/feeds/page.php?format={format}&#038;id={page_id} . Możemy wybrać spośród trzech formatów:</p>
+<ul>
+<li>rss20 &#8211; RSS 2.0 (rss20) </li>
+<li>atom10 &#8211; ATOM 1.0</li>
+<li>json &#8211; JSON</li>
+</ul>
+<p>Ja skorzystałem z dwóch &#8211; atom do połączenia z własnym feedly i pobieraniem postów z najbardziej interesujących mnie stron, ponieważ nie chciałbym, żeby akurat z nich uciekały mi informacje, oraz json do komunikacji jako API. </p>
+<p>Skoro już mamy wybrany format to powinniśmy jeszcze pobrać id naszej strony, jednak miejsce gdzie powinniśmy go szukjać nie jest do końca oczywiste. Facebook we wszystkich miejscach skutecznie maskuje id strony, z którą współpracuje. Id możemy znaleźć przez zbadanie np. firebugiem przycisku lubię to znajdującego się bezpośrednio na fanpage&#8217;u. W środku powinienn znajdować się input field z dodatkową wartością data-profileid skąd możemy pobrać nasze id. </p>
+<p>W tej chwili wklejając adres do przeglądarki powinien działać. Można sprawdzić: https://facebook.com/feeds/page.php?format=atom10&#038;id=60274674461 . Ale podczas proby pobrania strony po stronie PHP zamiast ostatnich postów otrzymujemy komunikat błędu. Co się dzieje? Otóż facebook udostępnia swoje dane jedynie zaufanym przeglądarkom, więc musimy mu dać znać, że taką jesteśmy &#8211; ja wybrałem mozillę:</p>
+<p><script src="https://gist.github.com/ppa-agnitio/6202246.js"></script></p>
+<p>I to działa.</p>
+<p>Papi.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://xlab.pl/facebook-fanpage-feed/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>PHPCon Poland 2013</title>
+		<link>http://xlab.pl/phpcon-poland-2013/</link>
+		<comments>http://xlab.pl/phpcon-poland-2013/#comments</comments>
+		<pubDate>Wed, 07 Aug 2013 10:26:05 +0000</pubDate>
+		<dc:creator>Piotr Pasich</dc:creator>
+				<category><![CDATA[Ogólne]]></category>
+		<category><![CDATA[Programowanie PHP]]></category>
+
+		<guid isPermaLink="false">http://xlab.pl/?p=2154</guid>
+		<description><![CDATA[W tym tygodniu rozpoczęło się głosowanie na agendę konferencji PHPCon Poland 2013 mające odbyć się 25-27 października w Szczyrku gdzie reprezentacja XSolve w osobach Wojciecha Sznapki i Piotra Pasicha zaproponowała 5 tematów: Sprytne środowiska developerskie Testy automatyczne &#8211; fakty i mity Osiąganie mądrej architektury z Symfony2 Allowed memory size of X bytes exhausted Make Your [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p style="margin-left: 100px;position:relative">
+W tym tygodniu rozpoczęło się <a href="http://www.phpcon.pl/2013/pl/agenda" target="_blank">głosowanie na agendę konferencji PHPCon Poland 2013</a> mające odbyć się 25-27 października w Szczyrku gdzie reprezentacja XSolve w osobach Wojciecha Sznapki i Piotra Pasicha zaproponowała 5 tematów:<br />
+<img width="90" height="" src="http://www.phpcon.pl/2013/pl/css/images/logo.png" alt="" style="left: -105px; position: absolute; top: 97px;">
+</p>
+<ul style="list-style: none outside none;margin-left: 100px;">
+<li style="background: url('http://xlab.pl/wp-content/themes/xsolve-white/css/../images/right-arrow.jpg') no-repeat scroll left center transparent;color: #666666; display: block; padding: 10px 0 10px 30px;">Sprytne środowiska developerskie </li>
+<li style="background: url('http://xlab.pl/wp-content/themes/xsolve-white/css/../images/right-arrow.jpg') no-repeat scroll left center transparent;color: #666666; display: block; padding: 10px 0 10px 30px;">Testy automatyczne &#8211; fakty i mity</li>
+<li style="background: url('http://xlab.pl/wp-content/themes/xsolve-white/css/../images/right-arrow.jpg') no-repeat scroll left center transparent;color: #666666; display: block; padding: 10px 0 10px 30px;">Osiąganie mądrej architektury z Symfony2</li>
+<li style="background: url('http://xlab.pl/wp-content/themes/xsolve-white/css/../images/right-arrow.jpg') no-repeat scroll left center transparent;color: #666666; display: block; padding: 10px 0 10px 30px;">Allowed memory size of X bytes exhausted</li>
+<li style="background: url('http://xlab.pl/wp-content/themes/xsolve-white/css/../images/right-arrow.jpg') no-repeat scroll left center transparent;color: #666666; display: block; padding: 10px 0 10px 30px;">Make Your Project SOLID!</li>
+</ul>
+<p style="margin-left: 100px;">
+Po zarejestrowaniu się można oddać swój głos na dowolną liczbę prezentacji do 25 sierpnia na stronie <a href="http://www.phpcon.pl/2013/pl/agenda" target="_blank">http://www.phpcon.pl/2013/pl/agenda</a>.<br />
+<br/><br />
+Piotr Pasich</p>
+]]></content:encoded>
+			<wfw:commentRss>http://xlab.pl/phpcon-poland-2013/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Composer i Symfony2.1 &#8211; bundle w vendorsach bez użycia packagista</title>
+		<link>http://xlab.pl/composer-i-symfony2-1-bundle-w-vendorsach-bez-uzycia-packagista/</link>
+		<comments>http://xlab.pl/composer-i-symfony2-1-bundle-w-vendorsach-bez-uzycia-packagista/#comments</comments>
+		<pubDate>Thu, 21 Feb 2013 23:23:49 +0000</pubDate>
+		<dc:creator>Mateusz Rosiek</dc:creator>
+				<category><![CDATA[Ogólne]]></category>
+		<category><![CDATA[bundle]]></category>
+		<category><![CDATA[composer]]></category>
+		<category><![CDATA[packagist]]></category>
+		<category><![CDATA[symfony2.1]]></category>
+		<category><![CDATA[vendors]]></category>
+
+		<guid isPermaLink="false">http://xlab.pl/?p=2143</guid>
+		<description><![CDATA[Startując nowy projekt, postanowiliśmy użyć własnego bundla, którego chcieliśmy umieścić w vendorach. Jedynym minusem było to, że nie chcieliśmy naszego bundla dodawać do packagista. I tu zaczęły pojawiać się problemy. Pierwszym problemem było poinformowanie composera, skąd ma pobierać naszego bundla. Z pomocą przychodzi następujący wpis: "repositories": [{"type": "package", "package": { "name": "nazwa/naszego-bundle", "version": "dev-master", "source": [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Startując nowy projekt, postanowiliśmy użyć własnego bundla, którego chcieliśmy umieścić w vendorach. Jedynym minusem było to, że nie chcieliśmy naszego bundla dodawać do packagista. I tu zaczęły pojawiać się problemy. Pierwszym problemem było poinformowanie composera, skąd ma pobierać naszego bundla. Z pomocą przychodzi następujący wpis:</p>
+<pre>"repositories": [{"type": "package",
+    "package": {
+        "name": "nazwa/naszego-bundle",
+        "version": "dev-master",
+        "source": {
+            "url": "adres/naszego-bundle.git",
+            "type": "git",
+            "reference": "master"
+        },
+        "target-dir" : "Target/DirNaszegoBundle"
+    }
+}]</pre>
+<p>No dobra, gdy w &#8220;require&#8221; podamy naszego bundla zostanie on ściągnięty. Ale, czy to już wystarczy aby działał? No niestety, composer w takim przypadku nie wygeneruje nam danych do autoload, przez co nasz bundle nie będzie widoczny w aplikacji. Co zrobić w takiej sytuacji? Wystarczy dodać go w pliku composer.json do &#8220;autoload&#8221;. Wygląda to tak:</p>
+<pre>"autoload": {
+    "psr-0": {
+        "": "src/",
+        "Nazwa": "vendor/lokalizacjaDoKtórejŚciągnęliśmyBundle"
+    }
+}</pre>
+<p>I voilà. Nasz bundle już jest widoczny w aplikacji i spokojnie możemy go zarejestrować w AppKernel.</p>
+<p>Pozdrawiam.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://xlab.pl/composer-i-symfony2-1-bundle-w-vendorsach-bez-uzycia-packagista/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>HTML5 Tworzenie Gier &#8211; Jacob Seidelin – Recenzja książki</title>
+		<link>http://xlab.pl/html5-tworzenie-gier-jacob-seidelin-recenzja-ksiazki/</link>
+		<comments>http://xlab.pl/html5-tworzenie-gier-jacob-seidelin-recenzja-ksiazki/#comments</comments>
+		<pubDate>Tue, 12 Feb 2013 10:34:40 +0000</pubDate>
+		<dc:creator>Kamil Ogórek</dc:creator>
+				<category><![CDATA[Ogólne]]></category>
+
+		<guid isPermaLink="false">http://xlab.pl/?p=2130</guid>
+		<description><![CDATA[Pomimo, że czasy dwuwymiarowych, pixelartowych platformówek takich jak Mario Bros., Castlevania czy Sonic już dawno przeminęły, historia zdaje się zataczać koło. Dzięki nowych technologiom webowych, takim jak HTML5 czy CSS3, gatunek ten zaczyna powoli powracać w wielkim stylu. Deweloperzy na nowo odkrywają magię pixelowych sprite&#8217;ów w celu tworzenia animacji, jednoosobowego pisania całych tytułów czy tworzenia [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><img class="alignright" style="float: right" alt="" src="http://merlin.pl/HTML5-Tworzenie-gier_Jacob-Seidelin,images_big,21,978-83-246-4480-3.jpg" width="171" height="246" /></p>
+<p>Pomimo, że czasy dwuwymiarowych, pixelartowych platformówek takich jak Mario Bros., Castlevania czy Sonic już dawno przeminęły, historia zdaje się zataczać koło.<br />
+Dzięki nowych technologiom webowych, takim jak HTML5 czy CSS3, gatunek ten zaczyna powoli powracać w wielkim stylu.<br />
+Deweloperzy na nowo odkrywają magię pixelowych sprite&#8217;ów w celu tworzenia animacji, jednoosobowego pisania całych tytułów czy tworzenia gier indie dla mas.<br />
+Kto w końcu nie chciał za młodu zostać twórcą gier komputerowych?</p>
+<p>&#8220;HTML5 &#8211; Tworzenie gier&#8221; to idealne wprowadzenie w świat game developmentu. Książka opisuje proces krok po kroku, od białego, nic nie zawierającego ekranu naszego monitora, aż do w pełni działającej, pełnowartościowej aplikacji.<br />
+Wybór gry, którą przyjdzie nam stworzyć nie jest może najtrafniejszym wyborem autora (klasyczna układanka z diamentami w roli głównej), jednak nawet na tak trywialnym przykładzie, zostały pokazane wszystkie z technik, które jesteśmy w stanie wykorzystać przy pracy nad bardziej ambitnymi tytułami.</p>
+<p>Nie trzeba być orłem w programowaniu, aby móc z wielkim zapałem zaczytać się w tej książce, jako, że zawiera ona dokładnie każdy element, którego przyszłoby się nam nauczyć na żmudnej drodze do stworzenia gry. Na przykład nowości HTML5, które zawierają przeróżne rodzaje API, począwszy od podstawowych Canvas, LocalStorage Audio, kończąc na tak zaawansowanych jak WebGL, WebSockets czy WebWorkers. HTML5 Tworzenie Gier idealnie prezentuje wszystkie „smaczki”, którymi możemy się raczyć obcując z wykorzystanymi do tworzenia gier techologiami.</p>
+<p>Najważniejszą z cech tego tytułu, który wyróżnia go spośród innych, jest ucięcie zbędnego gadania i przejście bezpośrednio do konkretów. Cała przekazywana nam wiedza opiera się na czysto praktycznych aspektach pracy, bez teoretyzowania, widzimy czarno na białym co i jak ma i będzie działać. Treść jest bardzo czytelna, zrozumiała i przejrzysta, nie trzeba się zastanawiać nad kontekstem, w jakim opisywana jest aktualnie nauczana funkcjonalność, nie trzeba wertować całej książki w celu znalezienia tego jednego zdania, którego właśnie brakuje nam do zrozumienia tego, o czym w danym momencie czytamy.</p>
+<p>Dodatkowymi zaletami książki są rozdziały takie, jak chociażby wykorzystanie PhoneGapa oraz Titanium do przeniesienia naszej nowostworzonej gry na urządzenia mobilne, a następnie udostępnienie jej szerszemu gronu odbiorców wykorzystując Google Play oraz AppStore.</p>
+<p>Jeżeli więc Final Fantasy Tactics wywołuje u Ciebie szybsze bicie serca, a odpalenie po latach serii Metroid sprawia, że chcesz zrobić cokolwiek aby Twoja przyszła rzesza fanów wspominała Twoje gry po latach, książka ta jest najlepszym punktem wyjściowym, jaki jestem w stanie Ci polecić.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://xlab.pl/html5-tworzenie-gier-jacob-seidelin-recenzja-ksiazki/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>PHP Standards Recommendations</title>
+		<link>http://xlab.pl/php-standards-recommendations/</link>
+		<comments>http://xlab.pl/php-standards-recommendations/#comments</comments>
+		<pubDate>Fri, 25 Jan 2013 10:15:38 +0000</pubDate>
+		<dc:creator>Michał Grabowski</dc:creator>
+				<category><![CDATA[Programowanie PHP]]></category>
+
+		<guid isPermaLink="false">http://xlab.pl/?p=2068</guid>
+		<description><![CDATA[Planowałem napisać artykuł o PSR. Ostatnio, na Nettuts+, pojawił się jednak bardzo fajny wpis na ten temat. Mój wpis będzie więc na inny temat, a zainteresowanych PSR zapraszam na Nettuts+. The goal of the FIG is to create a dialogue between project representatives, with the aim of finding ways to work together (interoperability). At the [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Planowałem napisać artykuł o PSR. Ostatnio, na Nettuts+, pojawił się jednak bardzo fajny wpis na ten temat. Mój wpis będzie więc na inny temat, a zainteresowanych PSR zapraszam na Nettuts+.</p>
+<blockquote><p>
+The goal of the FIG is to create a dialogue between project representatives, with the aim of finding ways to work together (interoperability). At the time of this writing, that dialogue has spawned four PHP Standards Recommendations: PSR-0 to PSR-3.<br />
+Those recommendations are free and can be adopted by anyone, though no one is obligated to do so. In fact, voting members are not required to implement any of the PSRs in the projects that they represent!</p></blockquote>
+<p>Pełny artykuł znajduje się tutaj <a href="http://net.tutsplus.com/tutorials/php/psr-huh/" title="http://net.tutsplus.com/tutorials/php/psr-huh/">http://net.tutsplus.com/tutorials/php/psr-huh/</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://xlab.pl/php-standards-recommendations/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Uwierzytelnianie użytkownika przez Google OAuth API</title>
+		<link>http://xlab.pl/autentykacja-uzytkownika-przez-google-oauth-api/</link>
+		<comments>http://xlab.pl/autentykacja-uzytkownika-przez-google-oauth-api/#comments</comments>
+		<pubDate>Tue, 22 Jan 2013 21:00:54 +0000</pubDate>
+		<dc:creator>Piotr Pasich</dc:creator>
+				<category><![CDATA[Programowanie PHP]]></category>
+		<category><![CDATA[Autentykacja]]></category>
+		<category><![CDATA[Autoryzacja]]></category>
+		<category><![CDATA[FOSUserBundle]]></category>
+		<category><![CDATA[google API]]></category>
+		<category><![CDATA[OAuth 2.0]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[symfony]]></category>
+		<category><![CDATA[Symfony 2.1]]></category>
+
+		<guid isPermaLink="false">http://xlab.pl/?p=2052</guid>
+		<description><![CDATA[Podczas prac nad jednym z ostatnich projektów spotkaliśmy się z problemem autentykacji użytkowników na stronie przez Google API. Jednak pomimo ogromnego zaangażowania community nie udało nam się znaleźć gotowego i działającego bundle’a przygotowanego dla Symfony 2.1, dlatego chcielibyśmy podzielić się jednym z wypracowanych przez zespół XSolve rozwiązań tego zagadnienia. Podany niżej przykład implementuje jedynie logowanie [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Podczas prac nad jednym z ostatnich projektów spotkaliśmy się z problemem autentykacji użytkowników na stronie przez Google API. Jednak pomimo ogromnego zaangażowania community nie udało nam się znaleźć gotowego i działającego bundle’a przygotowanego dla Symfony 2.1, dlatego chcielibyśmy podzielić się jednym z wypracowanych przez zespół XSolve rozwiązań tego zagadnienia.<br />
+<span id="more-2052"></span><br />
+Podany niżej przykład implementuje jedynie logowanie za pomocą Google API, ale nic nie stoi na przeszkodzie, aby rozszerzyć go o rejestrację. Wystarczy w klasie service’u w przypadku braku użytkownika obsłużyć jego utworzenie.</p>
+<h3>Instalacja niezbędnych repozytoriów</h3>
+<p>Aby przejść do meritum omawianego w artykule problemu, należy przyjąć, że mamy do dyspozycji zainstalowane i prawidłowo skonfigurowane trzy bundle, w tym FOSUserBundle (https://github.com/FriendsOfSymfony/FOSUserBundle) używanego do obsługi użytkowników.</p>
+<p>Zaczynamy od wprowadzenia bundli do composera:</p>
+<p>&#8220;require&#8221;: {<br />
+      &#8220;friendsofsymfony/user-bundle&#8221;: &#8220;*&#8221;,<br />
+      &#8220;bitgandtter/google-api&#8221;: &#8220;dev-master&#8221;,<br />
+      &#8220;bitgandtter/google-bundle&#8221;: &#8220;dev-master&#8221;,<br />
+},</p>
+<p>A następnie z poziomu consoli aktualizujemy repozytoria przez</p>
+<p>composer update;</p>
+<h3>Google OAuth 2.0</h3>
+<p>Zaczynamy od pozyskania klucza google w Google APIs Console pod adresem https://code.google.com/apis/console . Poniższe dane będą przydatne w konfiguracji aplikacji:</p>
+<p><img src=”http://studiomatrioszka.pl/xs/007.jpg” /></p>
+<h3>Konfiguracja</h3>
+<p>Po założeniu klucza API w Google przenosimy dane do konfiguracji w pliku app/config/parameters.yml :</p>
+<p><script src="https://gist.github.com/4597991.js"></script></p>
+<h3>Utworzenie service’u</h3>
+<p>Zgodnie z ideą Dependency Injection w Symfony 2 dla mechanizmów autoryzacji i autentykacji przez Google tworzymy osobny service.</p>
+<p>Definiujemy go w pliku Xsolve/TestBundle/Resources/config/services.xml</p>
+<p><script src="https://gist.github.com/4598215.js"></script></p>
+<p>Oraz tworzymy klasę service’u w Xsolve/TestBundle/Service/GoogleAuthorizationManager.php</p>
+<p><script src="https://gist.github.com/4598243.js"></script></p>
+<p>Autentykacja Google działa na podobnych zasadach, jak Facebook API &#8211; wysyłamy żądanie przekierowując użytkownika na odpowiedni adres po stronie Google, a w odpowiedzi otrzymujemy specjalny token zawarty w parametrze code, dzięki któremu biblioteka może pobrać dane o użytkowniku.</p>
+<h3>Controller</h3>
+<p>Na końcu pozostaje nam zdefiniowanie controllera obsługującego akcję:</p>
+<p><script src="https://gist.github.com/4598284.js"></script></p>
+<p>Teraz wystarczy sprawdzić jedynie działanie skryptu. W tym celu należy utworzyć button logowania przekierowujący użytkownika pod adres /oauth2callback .</p>
+<p>Have fun!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://xlab.pl/autentykacja-uzytkownika-przez-google-oauth-api/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Facebook &#8211; pobieranie ostatnich wpisów z fan page</title>
+		<link>http://xlab.pl/facebook-pobieranie-wpisow-z-fan-page/</link>
+		<comments>http://xlab.pl/facebook-pobieranie-wpisow-z-fan-page/#comments</comments>
+		<pubDate>Wed, 16 Jan 2013 21:31:22 +0000</pubDate>
+		<dc:creator>Piotr Pasich</dc:creator>
+				<category><![CDATA[Programowanie PHP]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[facebook]]></category>
+		<category><![CDATA[fan page]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[PHP SDK]]></category>
+		<category><![CDATA[pobieranie wpisow']]></category>
+		<category><![CDATA[symfony2]]></category>
+
+		<guid isPermaLink="false">http://xlab.pl/?p=2037</guid>
+		<description><![CDATA[Jednym z najmniej skomplikowanych przykładów, na podstawie których można zaprezentować ideę API Facebooka jest pobieranie danych z wybranego fan page’a do streamu aplikacji internetowej. W artykule chciałbym przedstawić, jak w prosty sposób podpiąć stronę internetową tak, aby mogła pobierać dane z konkretnego fan page’a wykorzystując API Facebooka i oczywiście Symfony 2. API Facebooka jest realizowane [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Jednym z najmniej skomplikowanych przykładów, na podstawie których można zaprezentować ideę API Facebooka jest pobieranie danych z wybranego fan page’a do streamu aplikacji internetowej. W artykule chciałbym przedstawić, jak w prosty sposób podpiąć stronę internetową tak, aby mogła pobierać dane z konkretnego fan page’a wykorzystując API Facebooka i oczywiście Symfony 2.<span id="more-2037"></span></p>
+<p>API Facebooka jest realizowane w modelu CAS (Central Authorisation System). Każda aplikacja dzięki przyznanemu przez Facebooka ID oraz sekretnemu kluczowi będzie mogła się zautoryzować przez API oraz pobrać token umożliwiający odpytywanie API o dodatkowe dane. W tym wypadku będziemy korzystać z Facebook PHP SDK (<a href="https://developers.facebook.com/docs/reference/php/">https://developers.facebook.com/docs/reference/php/</a>).</p>
+<p>Jednak, aby nie implementować komunikacji między oryginalną biblioteką Facebook PHP SDK, a Symfony posłużymy się FOSFacebookBundle (<a href="https://github.com/FriendsOfSymfony/FOSFacebookBundle">https://github.com/FriendsOfSymfony/FOSFacebookBundle</a>), którego instalację oraz konfigurację opiszę w kolejny punktach.</p>
+<h3>Tworzymy aplikację</h3>
+<p>Aby komunikować się z API Facebooka będziemy potrzebowali zarejestrowanej aplikacji w centrum developerskim. W tym celu klikamy w button “+utwórz aplikację” na stronie <a href="https://developers.facebook.com/apps">https://developers.facebook.com/apps</a> i uzupełniamy dane. Nazwa aplikacji jest obowiązkowa w przeciwieństwie do kolejnych opcji. App Namespace może się przydać w momencie komunikacji z OpenGraphem wykorzystywanym do historyjek i reklam facebookowych, a także będzie naszym adresem po stronie Facebooka (w naszym przypadku <a href="http://apps.facebook.com/xlabtestarticle">http://apps.facebook.com/xlabtestarticle</a> ).</p>
+<p><img alt="" src="http://studiomatrioszka.pl/xs/001.jpg" width="636px;" height="210px;" /></p>
+<p>Po utworzeniu nowej aplikacji zostaniemy przekierowani na stronę edycji jej ustawień. Uzupełniamy podstawowe dane i dodajemy możliwość logowania się ze strony statycznej oraz zakładki Facebooka. Widoczne na załączonym zrzucie dane będą potrzebne podczas konfiguracji aplikacji &#8211; App ID oraz App Secret.</p>
+<p><img alt="" src="http://studiomatrioszka.pl/xs/002.jpg" width="493px;" /></p>
+<h3>Przygotowanie Symfony do komunikacji z API Facebooka</h3>
+<p>Jako ideę programowania zawsze przyjmuję “nie wymyślać koła na nowo”. Dlatego skorzystamy z gotowego bundla FOSFacebookBundle implementującego service w dependency injection do komunikacji z API Facebooka.</p>
+<p>Jego pełną dokumentację można znaleźć na stronie githuba: <a href="https://github.com/FriendsOfSymfony/FOSFacebookBundle">https://github.com/FriendsOfSymfony/FOSFacebookBundle</a> .</p>
+<h3>Instalacja FOSFacebookBundle</h3>
+<p>1. Do pliku composer.json doklejamy w sekcji require kod odpowiedzialny za ściągnięcie biblioteki:</p>
+<p><code><span style="color: #000000"><br />
+{<br />&nbsp;"require":&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"friendsofsymfony/facebook-bundle":&nbsp;"dev-master",<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"facebook/php-sdk":&nbsp;"dev-master",<br />&nbsp;}<br />}</span><br />
+</code></p>
+<p>2. Uruchamiamy composera (gdyby composer.phar nie został zainstalowany, dodatek A opisuje jak to zrobić)</p>
+<p><code>composer.phar update friendsofsymfony/facebook-bundle</code></p>
+<p>3. Dodajemy bundle do pliku AppKernel.php</p>
+<p><code><span style="color: #000000"><br />
+//&nbsp;app/ApplicationKernel.php<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;function&nbsp;registerBundles()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;FOS\FacebookBundle\FOSFacebookBundle(),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p></span><br />
+</code></p>
+<p>4. Dodajemy nowe ścieżki routingu w routing.yml</p>
+<p><code><span style="color: #000000"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;#application/config/routing.yml<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_security_check:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pattern:&nbsp;&nbsp;/login_check<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_security_logout:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pattern:&nbsp;&nbsp;/logout</span><br />
+</code></p>
+<p>&nbsp;</p>
+<p>5. Definiujemy ustawienia bundla według danych z pierwszej części artykułu</p>
+<p><code><span style="color: #000000"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;application/config/config.yml<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fos_facebook:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file:&nbsp;&nbsp;&nbsp;%kernel.root_dir%/../vendor/facebook/php-sdk/src/base_facebook.php<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alias:&nbsp;&nbsp;xlabtestarticle<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app_id:&nbsp;193001437511739<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secret:&nbsp;30d57175929a938e2ac93d234535520d<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cookie:&nbsp;true<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;permissions:&nbsp;[email]</span><br />
+</code></p>
+<p>Opcja permissions jest przydatna podczas pobierania danych na temat użytkownika. Można poprosić go o dostęp do podstawowych danych, adresu email, znajomych, tablicy lub nawet opublikować w jego imieniu post na jego lub tablicy przyjaciela. Więcej informacji na ten temat można znaleźć w dokumentacji pod adresem: https://developers.facebook.com/docs/reference/login/.</p>
+<p>6. Pozostaje jeszcze tylko zdefiniować providera użytkownika oraz zabezpieczoną sekcję aplikacji</p>
+<p><code><span style="color: #000000"><br />
+security:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;firewalls:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;since&nbsp;anonymous&nbsp;is&nbsp;allowed&nbsp;users&nbsp;will&nbsp;not&nbsp;be&nbsp;forced&nbsp;to&nbsp;login<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pattern:&nbsp;&nbsp;&nbsp;^/.*<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fos_facebook:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app_url:&nbsp;"http://apps.facebook.com/appName/"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server_url:&nbsp;"http://localhost/facebookApp/"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anonymous:&nbsp;true</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;access_control:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;{&nbsp;path:&nbsp;^/secured/.*,&nbsp;role:&nbsp;[IS_AUTHENTICATED_FULLY]&nbsp;}&nbsp;#&nbsp;This&nbsp;is&nbsp;the&nbsp;route&nbsp;secured&nbsp;with&nbsp;fos_facebook<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;{&nbsp;path:&nbsp;^/.*,&nbsp;role:&nbsp;[IS_AUTHENTICATED_ANONYMOUSLY]&nbsp;}</span><br />
+</code></p>
+<p>Taka definicja access_control pozwoli nam zabezpieczyć jedynie część aplikacji wymagając autoryzacji z Facebookiem jedynie w routingu /secured/.</p>
+<h3>Pobieranie danych</h3>
+<p>Część zasadnicza tego artykułu, czyli&#8230; po konfiguracji i przygotowaniu Symfony 2 i aplikacji w Facebooku przechodzimy do implementacji pobierania ostatnich postów z wybranego fan page’a.</p>
+<p>Pierwszym krokiem będzie pobranie unikalnego tokena zwracanego przez Facebook API podczas autoryzacji użytkownika. Będzie on przydzielony do naszej aplikacji.</p>
+<p>W tym celu musimy chwilowo utworzyć akcję, do której będziemy mogli dostać się przez przeglądarkę internetową. Tworzymy nową ścieżkę routingu zabezpieczoną przez autoryzację Facebooka:</p>
+<p><code><span style="color: #000000"><br />
+_secured:<br />&nbsp;&nbsp;&nbsp;&nbsp;pattern:&nbsp;&nbsp;/secured<br />&nbsp;&nbsp;&nbsp;&nbsp;defaults:&nbsp;{&nbsp;_controller:&nbsp;AcmeDemoBundle:Welcome:secured&nbsp;}</span><br />
+</code></p>
+<p>oraz akcję w WelcomeControllerze o nazwie securedAction();</p>
+<p><code><span style="color: #000000"><br />
+<span style="color: #0000BB">&lt;?php</p>
+<p></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000BB">WelcomeController&nbsp;</span><span style="color: #007700">extends&nbsp;</span><span style="color: #0000BB">Controller<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">securedAction</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">var_dump</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">get</span><span style="color: #007700">(</span><span style="color: #DD0000">'fos_facebook.api'</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">getAccessToken</span><span style="color: #007700">());<br />&nbsp;&nbsp;&nbsp;}<br />}</span><br />
+</span><br />
+</code></p>
+<p>Po wpisaniu w przeglądarce <a href="http://localhost/facebookApp/">http://localhost/facebookApp</a>/web/app_dev.php/secured powinniśmy zostać przekierowani do strony autoryzacji Facebooka.</p>
+<p><img alt="" src="http://studiomatrioszka.pl/xs/003.jpg" width="664px;" height="312px;" /></p>
+<p>Jeżeli wszystko poszło dobrze to użytkownik powinien zostać prawidłowo zautoryzowany, a następnie przekierowany z powrotem do sekcji secured. Aby potwierdzić pełną autoryzację możemy zbadać obiekt $this-&gt;get(&#8216;security.context&#8217;)-&gt;getToken()-&gt;getUser() . Jako użytkownik powinien być zapisany nasz Facebook ID.</p>
+<h2>Pobieranie ostatnich wpisów z wybranego fan page’a</h2>
+<p>Aby otrzymać stały dostęp do API Facebooka bez potrzeby wielokrotnej autoryzacji należy zablokować opcję odświeżania klucza API w ustawienia aplikacji na stronie developers.facevook.com/apps . Ustawienia te znajdują się w opcjach zaawansowanych i oznaczone są jako Reset Client Token &#8211; powinno być ustawione na “no”.</p>
+<p>Po autoryzacji użytkownika z poziomu aplikacji przechodzimy do pobrania jego tokena, czyli unikalnego klucza sesji. Robimy to badając obiekt $this-&gt;get(&#8216;fos_facebook.api&#8217;)-&gt;getAccessToken()</p>
+<p><code><br />
+Przykład: string(112) "AAACviKYfwDsBAPAaNLhpJiLW8CZAfTPzfIG8XsDfFzFRZBSzuBVlwrTVZCm34NSMACzmuR27AE8iwZBgXQLXsPdGmJLXqs193UkrKy59XXXXX"<br />
+</code></p>
+<p>Tak pobrany string kopiujemy do konfiguracji aplikacji razem z fan page id dla którego chcemy pobrać dane, najlepiej do pliku parameters.ini jako:</p>
+<p><code><br />
+fb.token = AAACviKYfwDsBAPAaNLhpJiLW8CZAfTPzfIG8XsDfFzFRZBSzuBVlwrTVZCm34NSMACzmuR27AE8iwZBgXQLXsPdGmJLXqs193UkrKy59XXXXX</p>
+<p>fb.fanpageid = 60274674461<br />
+</code></p>
+<p>W końcu tworzymy akcję consoli, którą będziemy mogli wykorzystać do pobierania i zapisywania cyklicznie danych.</p>
+<p><code><span style="color: #000000"><br />
+<span style="color: #0000BB">&lt;?php</p>
+<p></span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">Acme</span><span style="color: #007700">\</span><span style="color: #0000BB">DemoBundle</span><span style="color: #007700">\</span><span style="color: #0000BB">Command</span><span style="color: #007700">;</p>
+<p>use&nbsp;</span><span style="color: #0000BB">Symfony</span><span style="color: #007700">\</span><span style="color: #0000BB">Bundle</span><span style="color: #007700">\</span><span style="color: #0000BB">FrameworkBundle</span><span style="color: #007700">\</span><span style="color: #0000BB">Command</span><span style="color: #007700">\</span><span style="color: #0000BB">ContainerAwareCommand</span><span style="color: #007700">;<br />use&nbsp;</span><span style="color: #0000BB">Symfony</span><span style="color: #007700">\</span><span style="color: #0000BB">Component</span><span style="color: #007700">\</span><span style="color: #0000BB">Console</span><span style="color: #007700">\</span><span style="color: #0000BB">Input</span><span style="color: #007700">\</span><span style="color: #0000BB">InputArgument</span><span style="color: #007700">;<br />use&nbsp;</span><span style="color: #0000BB">Symfony</span><span style="color: #007700">\</span><span style="color: #0000BB">Component</span><span style="color: #007700">\</span><span style="color: #0000BB">Console</span><span style="color: #007700">\</span><span style="color: #0000BB">Input</span><span style="color: #007700">\</span><span style="color: #0000BB">InputInterface</span><span style="color: #007700">;<br />use&nbsp;</span><span style="color: #0000BB">Symfony</span><span style="color: #007700">\</span><span style="color: #0000BB">Component</span><span style="color: #007700">\</span><span style="color: #0000BB">Console</span><span style="color: #007700">\</span><span style="color: #0000BB">Input</span><span style="color: #007700">\</span><span style="color: #0000BB">InputOption</span><span style="color: #007700">;<br />use&nbsp;</span><span style="color: #0000BB">Symfony</span><span style="color: #007700">\</span><span style="color: #0000BB">Component</span><span style="color: #007700">\</span><span style="color: #0000BB">Console</span><span style="color: #007700">\</span><span style="color: #0000BB">Output</span><span style="color: #007700">\</span><span style="color: #0000BB">OutputInterface</span><span style="color: #007700">;</p>
+<p>class&nbsp;</span><span style="color: #0000BB">FbCommand&nbsp;</span><span style="color: #007700">extends&nbsp;</span><span style="color: #0000BB">ContainerAwareCommand<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;protected&nbsp;function&nbsp;</span><span style="color: #0000BB">configure</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">setName</span><span style="color: #007700">(</span><span style="color: #DD0000">'demo:fb'</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">setDescription</span><span style="color: #007700">(</span><span style="color: #DD0000">'XSolve&nbsp;facebook&nbsp;demo&nbsp;article'</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<br />&nbsp;&nbsp;&nbsp;}</p>
+<p>&nbsp;&nbsp;&nbsp;protected&nbsp;function&nbsp;</span><span style="color: #0000BB">execute</span><span style="color: #007700">(</span><span style="color: #0000BB">InputInterface&nbsp;$input</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">OutputInterface&nbsp;$output</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$fbToken&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getContainer</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getParameter</span><span style="color: #007700">(</span><span style="color: #DD0000">'fb.token'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$fbSiteId&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getContainer</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getParameter</span><span style="color: #007700">(</span><span style="color: #DD0000">'fb.siteid'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$content&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getContainer</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">get</span><span style="color: #007700">(</span><span style="color: #DD0000">'fos_facebook.api'</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">api</span><span style="color: #007700">(</span><span style="color: #DD0000">"</span><span style="color: #0000BB">$fbSiteId</span><span style="color: #DD0000">/feed"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(...)<br />&nbsp;&nbsp;&nbsp;}<br />}&nbsp;</span><br />
+</span><br />
+</code></p>
+<p>Do zmiennej $content ładowanych jest ostatnich 25 aktywności na wybranych fan page’u. Każdy rekord zwrócony z API Facebooka przez tą metodę posiada własny typ np. status, photo lub link, dodatkowo posiada informacje na temat daty publikacji, pełnego zestawienia zawartości, komentarzy oraz polubień.</p>
+<p>Dodatkowe informacje na temat możliwości pobierania danych z fan page’ów można znaleźć w dokumentacji: <a href="https://developers.facebook.com/docs/reference/api/page/">https://developers.facebook.com/docs/reference/api/page/</a> .</p>
+<p>Have fun!</p>
+<h2>Dodatek A</h2>
+<p>Szybka instalacja composera:<br />
+$ curl -s http://getcomposer.org/installer | php<br />
+$ sudo mv composer.phar /usr/local/bin/composer.phar</p>
+<p>Dla leniwych:<br />
+$ alias composer=&#8217;/usr/local/bin/composer.phar&#8217;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://xlab.pl/facebook-pobieranie-wpisow-z-fan-page/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Zbliża się pierwsze śląskie spotkanie Geek Girls Carrots!</title>
+		<link>http://xlab.pl/zbliza-sie-pierwsze-slaskie-spotkanie-geek-girlsk-carrots/</link>
+		<comments>http://xlab.pl/zbliza-sie-pierwsze-slaskie-spotkanie-geek-girlsk-carrots/#comments</comments>
+		<pubDate>Tue, 06 Nov 2012 08:45:01 +0000</pubDate>
+		<dc:creator>justyna.wydra</dc:creator>
+				<category><![CDATA[Ogólne]]></category>
+
+		<guid isPermaLink="false">http://xlab.pl/?p=2020</guid>
+		<description><![CDATA[Już 15 listopada kobiety i dziewczyny, którym nieobce są nowe technologie, spotkają się w gliwickich loftach przy ulicy Zygmunta Starego 24A by dyskutować o tym, co w wirtualnym świecie piszczy. Będzie to pierwsze śląskie spotkanie klubu dziewczyn – karotek. Mężczyźni kochają gadżety i technologiczne nowinki. A kto powiedział, że tylko mężczyźni? Ktokolwiek tak stwierdził, mylił [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small"><strong>Już 15 listopada kobiety i dziewczyny, którym nieobce są nowe technologie, spotkają się w gliwickich loftach przy ulicy Zygmunta Starego 24A by dyskutować o tym, co w wirtualnym świecie piszczy. Będzie to pierwsze śląskie spotkanie klubu dziewczyn – karotek. </strong></span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">Mężczyźni kochają gadżety i technologiczne nowinki. A kto powiedział, że tylko mężczyźni? Ktokolwiek tak stwierdził, mylił się! Tak pomyślały organizatorki-założycielki społeczności Geek Girls Carrots i&#8230; lawina ruszyła. Najpierw Warszawa, potem Wrocław, Białystok, Kraków, wreszcie Gliwice. Kobiety działające w branżach IT i nowoczesnych technologii spotykają się raz w miesiącu i wymieniają wiedzę, doświadczenie i nowinki programistyczne oraz pochodzące ze świata WEB 2, 3 a nawet 4.0.</span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">15 listopada o 18:00 spotkamy się i porozmawiamy między nami, kobietami, o tym, co w nowych technologiach i ich świecie piszczy. Gościny i wsparcia udziela nam firma XSolve Sp. z o.o. </span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">Zapraszamy wszystkie zainteresowane! Będzie okazja, żeby się spotkać, pogadać, dowiedzieć czegoś nowego i stworzyć coś kreatywnego! :)</span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small"><strong>Podzielmy się wiedzą, doświadczeniem i&#8230; po prostu pogadajmy!</strong></span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small"><span style="text-decoration: underline">AGENDA spotkania GGC Silesia:</span></span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small"><br />
+18:00 &#8211; Kilka słów wstępu i powitanie: Anna Zarudzka &#8211; koordynatorka GGC Silesia</span></span></span></p>
+<p>18:20 &#8211; Prezentacje / Prelekcje:</p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small"><br />
+Naszymi Gośćmi będą m.in </span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">Monika Mikowska, autorka bloga </span></span></span><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small"><em>jestem.mobi</em></span></span></span><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">, która na co dzień odpowiada za rozwój kreatywnej agencji marketingu mobilnego o wdzięcznej marce, „mobee dick”.</span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">Dr Anna Maj &#8211; medioznawca i antropolog kultury, specjalizuje się w teorii komunikacji, problematyce dostępności i użyteczności w projektowaniu interakcji i mediach mobilnych, edukacji medialnej, socjologii Sieci i antropologii nowych mediów. </span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small"><br />
+19:30 – Networking</span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small"><br />
+20:00 &#8211; After Party, czyli zapraszamy do 4Art&#8217;u.</span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">Miejsce spotkania: Gliwice, ul. Zygmunta Starego 24a (lofty, parter budynku starego Spichlerza)</span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">Rejestracja uczestnictwa: </span></span></span><span style="color: #000080"><span style="text-decoration: underline"><a href="http://www.ggcsilesia1.evenea.pl/"><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">http://www.ggcsilesia1.evenea.pl/</span></span></span></a></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small"><strong>UWAGA! </strong></span></span></span><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">Uczestnictwo w spotkaniu jest DARMOWE</span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">Więcej o idei: </span></span></span></p>
+<p><span style="color: #000080"><span style="text-decoration: underline"><a href="http://geekgirlscarrots.pl/o-nas/"><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">http://geekgirlscarrots.pl/o-nas/</span></span></span></a></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">Zachęcamy do odwiedzenia także strony wydarzenia w serwisie Facebook:</span></span></span></p>
+<p><span style="color: #000080"><span style="text-decoration: underline"><a href="https://www.facebook.com/events/378330075584652/?notif_t=plan_user_invited"><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">https://www.facebook.com/events/378330075584652/?notif_t=plan_user_invited</span></span></span></a></span></span><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small"> </span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">Organizatorki spotkania GGC Silesia</span></span></span></p>
+<p><span style="color: #333333"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: small">Ania, Asia, Ania, Ania i Justyna</span></span></span></p>
+]]></content:encoded>
+			<wfw:commentRss>http://xlab.pl/zbliza-sie-pierwsze-slaskie-spotkanie-geek-girlsk-carrots/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Symfony Live London 2012 recap</title>
+		<link>http://xlab.pl/symfony-live-london-2012-recap/</link>
+		<comments>http://xlab.pl/symfony-live-london-2012-recap/#comments</comments>
+		<pubDate>Sat, 15 Sep 2012 18:55:55 +0000</pubDate>
+		<dc:creator>Wojtek Sznapka</dc:creator>
+				<category><![CDATA[Programowanie PHP]]></category>
+		<category><![CDATA[conference]]></category>
+		<category><![CDATA[symfony]]></category>
+		<category><![CDATA[symfony live london]]></category>
+		<category><![CDATA[symfony2]]></category>
+
+		<guid isPermaLink="false">http://xlab.pl/?p=2008</guid>
+		<description><![CDATA[On 14th September me and Piotr attended Symfony Live Conference in London. As a representation of XSolve team we expected great event and so it was. The conference was perfectly organized in amazing venue &#8211; The Brewery, in heart of London. But what was most important, was the atmosphere. Discussions, chats and experiences sharing between [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>On 14th September me and Piotr attended Symfony Live Conference in London. As a representation of XSolve team we expected great event and so it was. The conference was perfectly organized in amazing venue &#8211; The Brewery, in heart of London. But what was most important, was the atmosphere. Discussions, chats and experiences sharing between plenty of amazing devs was way better than on other conferences I had pleasure to attend before.</p>
+<p><img title="Więcej..." src="http://xlab.pl/wp-includes/js/tinymce/plugins/wordpress/img/trans.gif" alt="" />This conference has strengthened our belief how strong and integrated Symfony community is. Speakers and many people who show their excellence during corridor talks also prooved that this project is most innovative thing that happens in PHP ecosystem.</p>
+<p>Back to the conference, we had huge dilemma, when it comes to choose talks from two tracks. In the end we choose those, which were closest to things we do on daily basis:</p>
+<ul>
+<li>- Opening keynote by Dries Buytaert,</li>
+<li>- &#8220;Effective code reviews&#8221; by Sebasitan Marek,</li>
+<li>- &#8221;Simple searching with ElasticSearch&#8221; by Rich Miller and Jeremy Mikola,</li>
+<li>- &#8221;Thins Your Mother Didn&#8217;t Tell you About Bundle Configuration&#8221; by Dennis Benkert,</li>
+<li>- &#8221;Drupal 8&#8243; by Alex Pott and Nathaniel Catchpole,</li>
+<li>- &#8221;Symfony2 on Amazon Web Services&#8221; by Rowan Merewood,</li>
+<li>- Closing keynote by Fabien Potencier.</li>
+</ul>
+<div></div>
+<p>To sum things up: it was worth travelling there from Poland and be part of such awesome event!<img title="Więcej..." src="http://xlab.pl/wp-includes/js/tinymce/plugins/wordpress/img/trans.gif" alt="" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://xlab.pl/symfony-live-london-2012-recap/feed/</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+		<item>
+		<title>Symfony2 w chmurze</title>
+		<link>http://xlab.pl/symfony2-w-chmurze/</link>
+		<comments>http://xlab.pl/symfony2-w-chmurze/#comments</comments>
+		<pubDate>Sat, 26 May 2012 09:09:55 +0000</pubDate>
+		<dc:creator>Wojtek Sznapka</dc:creator>
+				<category><![CDATA[Programowanie PHP]]></category>
+		<category><![CDATA[amazon s3]]></category>
+		<category><![CDATA[aws]]></category>
+		<category><![CDATA[cloud]]></category>
+		<category><![CDATA[cloud computing]]></category>
+		<category><![CDATA[gaufrette]]></category>
+		<category><![CDATA[master slave]]></category>
+		<category><![CDATA[symfony2]]></category>
+
+		<guid isPermaLink="false">http://xlab.pl/?p=1999</guid>
+		<description><![CDATA[Pojęcie &#8220;Cloud Computing&#8221; robi w ostatnich latach piorunującą karierę. Dla jednych to tylko słówko kluczowe nagłaśniane przez marketing i PR, a dla innych (programistów i architektów) to wyzwanie, które może zredukować koszty infrastruktury serwerowej i poradzić sobie z wysokim ruchem na naszych serwisach. Czym właściwie jest chmura? Jest to przede wszystkim zwirtualizowana infrastruktura serwerowa, przemyślana pod [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Pojęcie &#8220;Cloud Computing&#8221; robi w ostatnich latach piorunującą karierę. Dla jednych to tylko słówko kluczowe nagłaśniane przez marketing i PR, a dla innych (programistów i architektów) to wyzwanie, które może zredukować koszty infrastruktury serwerowej i poradzić sobie z wysokim ruchem na naszych serwisach.</p>
+<p>Czym właściwie jest chmura? Jest to przede wszystkim zwirtualizowana infrastruktura serwerowa, przemyślana pod kątem bezproblemowego skalowania horyzontalnego. Na rynku jest wiele dostawców oferujących usługi Cloud, najbardziej znani to Amazon Web Services, RackSpace, Heroku czy Microsoft Azure.</p>
+<p>O czym programiści powinni pamiętać tworząc aplikacje w Symfony2, które będą uruchamiane w chmurze? Najważniejsze to: <strong>nie zapisuj niczego lokalnie!</strong> Należy całkowicie zapomnieć o lokalnym storage i obsługiwać operacje dyskowe IO przez abstrakcyjne warstwy dostępu.</p>
+<p><strong>Po pierwsze</strong>: do obsługi systemu plików powinniśmy wykorzystać <a href="https://github.com/KnpLabs/Gaufrette">Knp Gaufrette Bundle</a>, który tworzy warstwę pośrednią pomiędzy filesystemem a naszą aplikacją. Gaufrette pozwala definiować wiele filesystemów, a dla każdego z nich adapter. Dostępne adaptery to: Local, Amazon S3, GridFS, MogileFS, Rackspace cloudfiles, In Memory, Zip, FTP, SFTP. Dzięki takiemu podejściu, mamy jeden interfejs dostępu do plików bez względu na to jaki adapter (miejsce docelowe) wybierzemy.</p>
+<p><strong>Po drugie</strong>: sesje użytkowników powinny być przechowywane w bazie danych. Jeśli będziemy mieli kilka instancji serwera, a ruch rozdzielany load balancerem, to w trakcie kilku wywołań możemy być obsługiwani przez różne serwery. To z kolei może powodować, że będziemy gubili sesje (będą na różnych serwerach). Rozwiązaniem jest przechowywanie sesji w bazie danych używając wbudowanej klasy PdoSessionStorage. Opis jak to uzyskać znajdziemy w <a href="http://symfony.com/doc/current/cookbook/configuration/pdo_session_storage.html">cookbooku</a></p>
+<p><strong>Po trzecie</strong>: musimy dbać o synchronizację logów, w przypadku gdy mamy więcej niż jeden serwer pod load balancerem. Synchronizację można osiągnąć na kilka sposobów. Możemy stworzyć adapter do Monolog, który będzie korzystał z filesystemu Gaufrette. Możemy logować do centralnego loggera, takiego jak na przykład syslog. Możemy też synchronizować logi na jednym centralnym serwerze co interwał czasowy z crona. Rozwiązanie zależy od skali serwisu i powinno być dobrane na etapie analizy.</p>
+<p><strong>Po czwarte</strong>: powinniśmy zadbać o skalowanie bazy danych. Najpopularniejszym rozwiązaniem jest konfiguracja MySQL Master-Slave. W tym wypadku należy bezwzględnie przestrzegać zasady, że zapisujemy tylko do Master a odczytujemy tylko z Slave (wybranego np. losowo). Od wersji Doctrine DBAL 2.2.0 i Symfony 2.1 dostępna jest klasa wrapper</p>
+<pre>Doctrine\DBAL\Connections\MasterSlaveConnection</pre>
+<p>Klasa ta losowo wybiera połączenie do Slave w przypadku zapytań typu SELECT, a Master w przypadku INSERT, UPDATE, DELETE i innych modyfikujących dane.</p>
+<p><strong>Na koniec</strong> warto jeszcze wspomnieć o procesie rozwoju aplikacji. Najczęściej robimy to na maszynach lokalnych, więc nie potrzebujemy master-slave dla bazy danych lub uploadu plików statycznych do chmury Amazon S3. Aby to osiągnąć, wystarczy skonfigurować odpowiednio Symfony2 w plikach config_dev.yml (adapter local dla Gaufrette i brak wrapper_class dla połączenia DBAL) i korzystać z kontrolera developerskiego app_dev.php.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://xlab.pl/symfony2-w-chmurze/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+	</channel>
+</rss>
