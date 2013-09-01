@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Klasa pobieraj¹ca newsy z pliku XML kana³u RSS.
+ * Klasa pobierajÄ…ca newsy z pliku XML kanaÅ‚u RSS.
  */
 class RssReader {
 	
