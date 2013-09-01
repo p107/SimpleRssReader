@@ -1,11 +1,11 @@
 <?php
 
 /** 
- * Adres kana³u RSS
+ * Adres kanaÅ‚u RSS
  */
 $conf['feed_url'] = 'http://xlab.pl/feed/';
 
 /**
- * Znki przystankowe wycinane podczas wyszukiwania s³ów w tekstach
+ * Znaki przystankowe wycinane podczas wyszukiwania sÅ‚Ã³w w tekstach
  */
 $conf['delimiters'] = array(',','.','"',':','!','?','(',')','[',']',"'",'#','{','}','/',"\\",'|','+','-');
